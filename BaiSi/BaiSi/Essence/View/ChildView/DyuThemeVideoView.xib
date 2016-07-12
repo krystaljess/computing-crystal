@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DyuThemeVideoView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="275"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uE5-YU-ti9">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="275"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GmD-6J-yut">
+                    <rect key="frame" x="152" y="102" width="71" height="71"/>
+                    <state key="normal" image="video-play"/>
+                    <connections>
+                        <action selector="VideoBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="4Co-yq-9Zb"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0人播放" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5V8-NU-RZP">
+                    <rect key="frame" x="320" y="0.0" width="55" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0人点赞" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvg-fr-zYy">
+                    <rect key="frame" x="320" y="257" width="55" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="bvg-fr-zYy" secondAttribute="bottom" id="28c-WF-fv9"/>
+                <constraint firstItem="5V8-NU-RZP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5ta-hQ-yfd"/>
+                <constraint firstItem="GmD-6J-yut" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="7Af-bv-FtN"/>
+                <constraint firstItem="GmD-6J-yut" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="D2r-4X-6BJ"/>
+                <constraint firstAttribute="bottom" secondItem="uE5-YU-ti9" secondAttribute="bottom" id="HT5-SN-x42"/>
+                <constraint firstItem="uE5-YU-ti9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Inm-nd-ffa"/>
+                <constraint firstAttribute="trailing" secondItem="uE5-YU-ti9" secondAttribute="trailing" id="Xdp-5G-VV1"/>
+                <constraint firstAttribute="trailing" secondItem="bvg-fr-zYy" secondAttribute="trailing" id="aJw-lL-o2M"/>
+                <constraint firstItem="uE5-YU-ti9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hIi-IP-L8N"/>
+                <constraint firstAttribute="trailing" secondItem="5V8-NU-RZP" secondAttribute="trailing" id="nnJ-KX-dGN"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="BottemLable" destination="bvg-fr-zYy" id="32V-fE-X6b"/>
+                <outlet property="ImageView" destination="uE5-YU-ti9" id="gfi-3J-Ow8"/>
+                <outlet property="totaLable" destination="5V8-NU-RZP" id="Cn9-kk-Y0J"/>
+            </connections>
+            <point key="canvasLocation" x="307.5" y="276.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="video-play" width="71" height="71"/>
+    </resources>
+</document>
